@@ -88,6 +88,7 @@ def _get_umf_family(A):
 
     return family
 
+
 def _splu_solve(A, job_cols):
     Afactsolve = factorized(A)
     result = {}
@@ -102,6 +103,7 @@ def _splu_solve(A, job_cols):
         result[j] = (row_seg, col_seg, data_seg)
 
     return result
+
 
 def spsolve(A, b, permc_spec=None, splu_parallel=True, use_umfpack=True):
     """Solve the sparse linear system Ax=b, where b may be a vector or a matrix.
